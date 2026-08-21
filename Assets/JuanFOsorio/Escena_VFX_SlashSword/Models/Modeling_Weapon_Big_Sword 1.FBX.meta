@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/JuanFOsorio/Escena_VFX_SlashSword/Models/Modeling_Weapon_Big_Sword 1.FBX.meta
 guid: abc4215716563c54084cd57f14e6a593
+=======
+guid: 7b78053ce4ddaa249921017bc5ea75a4
+>>>>>>> 4ede456c0c059657976aaa91c88d4e94ede25956:Assets/JuanFOsorio/Escena_VFK_SlashSword/Models/Modeling_Weapon_Big_Sword 1.FBX.meta
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:

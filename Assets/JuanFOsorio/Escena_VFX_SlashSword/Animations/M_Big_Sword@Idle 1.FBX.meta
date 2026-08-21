@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/JuanFOsorio/Escena_VFX_SlashSword/Animations/M_Big_Sword@Idle 1.FBX.meta
 guid: 07dd813426d8b7a4a9caa67b1327dfd8
+=======
+guid: 014bf292ca2c3624e80377ab172f317b
+>>>>>>> 4ede456c0c059657976aaa91c88d4e94ede25956:Assets/JuanFOsorio/Escena_VFK_SlashSword/Animations/M_Big_Sword@Idle 1.FBX.meta
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:

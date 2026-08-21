@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/JuanFOsorio/Escena_VFX_SlashSword/Prefabs.meta
 guid: 7ada4cbf5df381b429f418f8320f3d35
+=======
+guid: 660e0807d286f5b45ac56fcab12a655e
+>>>>>>> 4ede456c0c059657976aaa91c88d4e94ede25956:Assets/JuanFOsorio/Escena_VFK_SlashSword/Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

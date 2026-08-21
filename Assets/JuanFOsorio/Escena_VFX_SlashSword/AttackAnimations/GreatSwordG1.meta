@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/JuanFOsorio/Escena_VFX_SlashSword/AttackAnimations/GreatSwordG1.meta
 guid: 67b438464bac6ea43a7b42f61a509a4c
+=======
+guid: 130db67d6091ce74caef98a256098cc3
+>>>>>>> 4ede456c0c059657976aaa91c88d4e94ede25956:Assets/JuanFOsorio/Escena_VFK_SlashSword/AttackAnimations/GreatSwordG1.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
