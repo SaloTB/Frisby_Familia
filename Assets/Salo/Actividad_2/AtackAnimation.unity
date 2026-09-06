@@ -9934,7 +9934,7 @@ Transform:
   m_GameObject: {fileID: 1344413672}
   serializedVersion: 2
   m_LocalRotation: {x: -0.21806462, y: -0.6615903, z: -0.2245935, w: 0.6813985}
-  m_LocalPosition: {x: -0.2, y: 0.94, z: 0.47}
+  m_LocalPosition: {x: -0.18, y: 0.97, z: 0.47}
   m_LocalScale: {x: 1.122762, y: 1.3304129, z: 1.1619028}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19752,31 +19752,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455052563442308447, guid: 036ffb35b08df8d5c963f77a784a0323, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4965338
+      value: -0.42039168
       objectReference: {fileID: 0}
     - target: {fileID: 7455052563442308447, guid: 036ffb35b08df8d5c963f77a784a0323, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.60146445
+      value: 0.79785275
       objectReference: {fileID: 0}
     - target: {fileID: 7455052563442308447, guid: 036ffb35b08df8d5c963f77a784a0323, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.106863946
+      value: -0.1689327
       objectReference: {fileID: 0}
     - target: {fileID: 7455052563442308447, guid: 036ffb35b08df8d5c963f77a784a0323, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.056391288
+      value: 0.2863932
       objectReference: {fileID: 0}
     - target: {fileID: 7455052563442308447, guid: 036ffb35b08df8d5c963f77a784a0323, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.44039464
+      value: -0.75268704
       objectReference: {fileID: 0}
     - target: {fileID: 7455052563442308447, guid: 036ffb35b08df8d5c963f77a784a0323, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.89495254
+      value: -0.5689214
       objectReference: {fileID: 0}
     - target: {fileID: 7455052563442308447, guid: 036ffb35b08df8d5c963f77a784a0323, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.04396094
+      value: -0.16664228
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
