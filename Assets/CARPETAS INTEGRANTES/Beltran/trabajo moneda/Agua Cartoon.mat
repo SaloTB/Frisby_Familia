@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5759981925848116613
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Agua Cartoon
+  m_Shader: {fileID: -6465566751694194690, guid: ecf421d2f25dd4a7e88aacf4e6a921ef, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Cubemap:
+        m_Texture: {fileID: 8900000, guid: 66048dd266b1f41b1889f4a95386f720, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normal_1:
+        m_Texture: {fileID: 2800000, guid: 3f1181906f6784ddea477146ea94ab94, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normal_2:
+        m_Texture: {fileID: 2800000, guid: b0400b8d319e54e6882723fe46090626, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normal_3:
+        m_Texture: {fileID: 2800000, guid: 5ad44987fccf442c98345c8a1c566aa3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Banda_1: 0.18
+    - _Banda_2: 0.5
+    - _Brillo_Dureza: 25
+    - _Brillo_Intensidad: 1
+    - _Brillo_Umbral: 0.35
+    - _Calma_Cerca_Orilla: 0
+    - _Cresta_Cantidad: 1
+    - _Cresta_Patron_Escala: 4
+    - _Cresta_Patron_Umbral: 0.7
+    - _Cresta_Patron_Velocidad: 1.5
+    - _Cresta_Suavidad: 0.15
+    - _Cresta_Umbral: 0.72
+    - _CubemapIntensity: 1.22
+    - _Destellos_Intensidad: 1
+    - _Destellos_Umbral: 0.55
+    - _Displacemente_force: 0.03
+    - _Displacemente_scale: 0.25
+    - _Espuma_Ancho: 0.08
+    - _Espuma_Suavidad: 0.01
+    - _Espuma_Zona: 0.6
+    - _Espuma_Zona_Cantidad: 0
+    - _Espuma_Zona_Escala: 2.5
+    - _Espuma_Zona_Suavidad: 0.04
+    - _Espuma_Zona_Velocidad: 0.3
+    - _Fresnel_Potencia: 4
+    - _Fuerza_normal: 0.2
+    - _Linea_Distancia: 0.15
+    - _Linea_Grosor: 0.015
+    - _Linea_Movimiento: 0.05
+    - _Linea_Velocidad: 1
+    - _Ola_2_Escala: 2.7
+    - _Ola_2_Fuerza: 0
+    - _Olas_Relieve: 6
+    - _Oleaje_Disolver_Escala: 3
+    - _Oleaje_Distancia: 0.4
+    - _Oleaje_Empuje: 0.06
+    - _Oleaje_Velocidad: 0.25
+    - _Ondas_Hacia_Afuera: 0
+    - _Patos_Espuma_Escala: 0.5
+    - _Profundidad_Max: 1.6
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Reflejo_Fuerza: 0.5
+    - _Reflejo_Pasos: 3
+    - _Reflejo_Suavidad: 0.05
+    - _Reflejo_Umbral: 0.3
+    - _Ruido_Escala: 4
+    - _Ruido_Fuerza: 0.06
+    - _Ruido_Velocidad: 0.15
+    - _Sombra_Olas: 0.85
+    - _Sombra_Umbral: 0.2
+    - _Suavidad_Bandas: 0.02
+    - _Transparencia_Orilla: 0.7
+    - _Zona_Clara_Fuerza: 0
+    - _fuerza_de_refraccion: 0.01
+    m_Colors:
+    - _Color_Espuma: {r: 1, g: 1, b: 1, a: 1}
+    - _Color_Medio: {r: 0.2, g: 0.66, b: 0.88, a: 1}
+    - _Color_Orilla: {r: 0.39999998, g: 0.9, b: 0.85, a: 1}
+    - _Color_Profundo: {r: 0.14, g: 0.42, b: 0.82, a: 1}
+    - _Color_Reflejo: {r: 0.85, g: 0.96999997, b: 1, a: 1}
+    - _Color_Zona_Clara: {r: 0.7, g: 0.93, b: 0.95, a: 1}
+    - _Displacement_animation: {r: 1, g: -1, b: 0, a: 0}
+    - _Normal_animation: {r: 0.125, g: 0.1, b: 0.2, a: 0}
+    - _Normal_animation_1: {r: 0.15, g: -0.1, b: 0.33, a: 0}
+    - _Normal_animation_3: {r: -0.2, g: 0, b: 0.6, a: 0}
+    - _Tinte_Fondo: {r: 0.54999995, g: 0.95, b: 0.9, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
