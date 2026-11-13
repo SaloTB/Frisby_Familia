@@ -127,6 +127,16 @@ public class PatoFlotante : MonoBehaviour
         aplicado = false;
     }
 
+    // Para PatoHabilidades y los efectos de la demo: altura (salto), giro en Y (slash),
+    // escala (estirar/aplastar, 0 = normal) e inclinación (grados) que se suman al flote.
+    // Solo se aplican en Play y no se guardan.
+    [System.NonSerialized] public float alturaExtra;
+    [System.NonSerialized] public float giroExtra;
+    [System.NonSerialized] public Vector3 escalaExtra;
+    [System.NonSerialized] public Vector3 inclinacionExtra;
+    Vector3 escalaBase;
+    bool escalaGuardada;
+
     // Para PatoJugador: mueve el punto (en XZ) y la orientación alrededor de los cuales flota el pato.
     public Vector3 PosicionBase => posicionInicial;
     public void MoverBase(Vector3 posicion, Quaternion rotacion)
@@ -179,7 +189,7 @@ public class PatoFlotante : MonoBehaviour
 
         Vector3 posicion = new Vector3(posicionInicial.x, baseY, posicionInicial.z)
                            + deriva
-                           + Vector3.up * y * alturaOla;
+                           + Vector3.up * (y * alturaOla + alturaExtra);
 
         // Balanceo: cabeceo, alabeo y un giro lento.
         float cabeceo = Ruido(velocidadBalanceo, 30f) * inclinacion;
@@ -188,7 +198,13 @@ public class PatoFlotante : MonoBehaviour
 
         ultimaGuinada = Quaternion.Euler(0f, guinada, 0f);
         ultimaInclinacion = Quaternion.Euler(cabeceo, 0f, alabeo);
-        transform.SetPositionAndRotation(posicion, ultimaGuinada * rotacionInicial * ultimaInclinacion);
+        transform.SetPositionAndRotation(posicion,
+            Quaternion.Euler(0f, giroExtra, 0f) * ultimaGuinada * rotacionInicial * Quaternion.Euler(inclinacionExtra) * ultimaInclinacion);
+        if (Application.isPlaying)
+        {
+            if (!escalaGuardada) { escalaBase = transform.localScale; escalaGuardada = true; }
+            transform.localScale = Vector3.Scale(escalaBase, Vector3.one + escalaExtra);
+        }
 
         ultimaPosicion = transform.position;
         ultimaRotacion = transform.rotation;

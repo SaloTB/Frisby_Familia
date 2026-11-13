@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX Fuego
+  m_Shader: {fileID: 4800000, guid: 7d8077a6314306144b968c9b2205e8be, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Disolver: 0
+    - _EscalaX: 10
+    - _EscalaY: 3
+    - _Intensidad: 1
+    - _PotenciaForma: 1
+    - _TiempoFX: 0
+    - _Velocidad: 2.2
+    m_Colors:
+    - _ColorBase: {r: 0.25, g: 0.5, b: 1.6, a: 1}
+    - _ColorNucleo: {r: 0.7, g: 1.2, b: 1.9, a: 1}
+    - _ColorPunta: {r: 0.25, g: 0.18, b: 0.85, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

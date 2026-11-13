@@ -586,7 +586,7 @@ Transform:
   m_GameObject: {fileID: 37456743}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -20.36039, y: 10.906854, z: -9.107905}
+  m_LocalPosition: {x: -20.36039, y: 10.976737, z: -9.107905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -812,8 +812,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73795930}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.22150464, y: 0.9724668, z: 0.048254512, w: 0.053996097}
-  m_LocalPosition: {x: -3.584408, y: 0.124325834, z: -1.1694632}
+  m_LocalRotation: {x: -0.21941026, y: 0.97243565, z: 0.06698468, w: 0.04172807}
+  m_LocalPosition: {x: -3.582357, y: -0.07950933, z: -1.2664629}
   m_LocalScale: {x: 0.28680992, y: 0.28680992, z: 0.28680992}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1557,8 +1557,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285275213}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15264408, y: -0.8416305, z: 0.072422504, w: -0.5129453}
-  m_LocalPosition: {x: -21.99332, y: 1.134572, z: -10.096643}
+  m_LocalRotation: {x: 0.18201287, y: -0.83541155, z: 0.09038118, w: -0.5106762}
+  m_LocalPosition: {x: -21.90601, y: 0.92180693, z: -10.30775}
   m_LocalScale: {x: 0.104284085, y: 0.104284085, z: 0.104284085}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8758,8 +8758,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762704496}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.013847053, y: 0.65406984, z: 0.4097305, w: -0.63570577}
-  m_LocalPosition: {x: -31.738672, y: 1.1349614, z: 10.685565}
+  m_LocalRotation: {x: 0.00089835847, y: 0.6908685, z: 0.45164534, w: -0.56454974}
+  m_LocalPosition: {x: -31.888306, y: 0.94253117, z: 10.758408}
   m_LocalScale: {x: 0.104284085, y: 0.104284085, z: 0.104284085}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9233,8 +9233,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856894037}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3988778, y: 0.87484527, z: 0.0058063446, w: -0.2747883}
-  m_LocalPosition: {x: -9.43346, y: 1.1337508, z: 7.85579}
+  m_LocalRotation: {x: 0.36268103, y: 0.8936707, z: 0.0020948015, w: -0.26421747}
+  m_LocalPosition: {x: -9.3366585, y: 0.9293581, z: 8.027457}
   m_LocalScale: {x: 0.104284085, y: 0.104284085, z: 0.104284085}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12354,6 +12354,7 @@ GameObject:
   - component: {fileID: 1541450966}
   - component: {fileID: 1541450965}
   - component: {fileID: 1541450964}
+  - component: {fileID: 1541450969}
   m_Layer: 0
   m_Name: PatoJugador
   m_TagString: Untagged
@@ -12471,14 +12472,42 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541450963}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.4397434, y: 0.8639441, z: 0.24115448, w: 0.045507506}
-  m_LocalPosition: {x: -20.36039, y: 1.1001081, z: -9.107905}
+  m_LocalRotation: {x: -0.44482324, y: 0.8627628, z: 0.23471706, w: 0.051775083}
+  m_LocalPosition: {x: -20.36039, y: 0.9206221, z: -9.107905}
   m_LocalScale: {x: 0.104284085, y: 0.104284085, z: 0.104284085}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 582229717}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -124.631, z: 0}
+--- !u!114 &1541450969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541450963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e860dbd592abb945a5917cf0b0c3abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatoHabilidades
+  alturaSalto: 1.5
+  gravedad: 22
+  gotasSalpicadura: 30
+  duracionSlash: 0.45
+  vueltas: 1
+  esperaSlash: 0.15
+  gotasPorSegundo: 220
+  radioChorro: 0.55
+  velocidadTangencial: 6
+  velocidadRadial: 2.5
+  velocidadSubida: 2.2
+  halos: {fileID: 582229719}
+  tamanoHaloSlash: 6
+  tamanoHaloAterrizaje: 4.5
+  materialGotas: {fileID: 0}
+  colorGotas: {r: 0.62, g: 0.88, b: 1, a: 0.95}
 --- !u!1 &1585112908
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,13 @@ public class PatoJugador : MonoBehaviour
     public MeshFilter agua;
     [Tooltip("No se acerca más a la arena que esto (0 = arena, 1 = lejos de la orilla).")]
     [Range(0f, 1f)] public float limiteOrilla = 0.3f;
+    [Tooltip("Límite circular de la zona de juego: el pato no sale de este círculo.")]
+    public bool usarLimite = true;
+    public Vector3 centroLimite = new Vector3(-19.5f, 0f, 2.8f);
+    public float radioLimite = 40f;
+
+    // Lo activan los efectos de la demo mientras animan al pato: ignora WASD.
+    [System.NonSerialized] public bool controlBloqueado;
 
     [Header("Cámara")]
     public bool seguirCamara = true;
@@ -37,7 +44,10 @@ public class PatoJugador : MonoBehaviour
     void OnEnable()
     {
         flotar = GetComponent<PatoFlotante>();
+        // arranca derecho (sin la inclinación con la que quedó en la escena), mirando hacia donde miraba
         rotBase = transform.rotation;
+        var frente = Vector3.ProjectOnPlane(transform.rotation * Quaternion.Euler(0f, -giroModelo, 0f) * Vector3.forward, Vector3.up);
+        if (frente.sqrMagnitude > 1e-4f) rotBase = Quaternion.LookRotation(frente.normalized) * Quaternion.Euler(0f, giroModelo, 0f);
         vel = Vector3.zero;
         mapaAgua = null;
         if (seguirCamara)
@@ -56,7 +66,7 @@ public class PatoJugador : MonoBehaviour
     {
         var kb = Keyboard.current;
         Vector2 entrada = Vector2.zero;
-        if (kb != null)
+        if (kb != null && !controlBloqueado)
         {
             if (kb.wKey.isPressed) entrada.y += 1f;
             if (kb.sKey.isPressed) entrada.y -= 1f;
@@ -103,13 +113,23 @@ public class PatoJugador : MonoBehaviour
         camara.transform.position = Vector3.Lerp(camara.transform.position, objetivo, 1f - Mathf.Exp(-suavidadCamara * Time.deltaTime));
     }
 
-    // ¿Hay agua (y lejos de la arena) en este punto? Se lee del color de vértice del mesh del agua.
+    // Para los efectos (p. ej. el teletransporte): ¿puede el pato estar en este punto?
+    public bool PuedeNadarEn(Vector3 p) => Permitido(p);
+
+    // ¿Hay agua (y lejos de la arena) en este punto, dentro del límite de juego?
+    // La distancia a la orilla se lee del color de vértice del mesh del agua; donde el mesh
+    // no tiene vértices cercanos (mar abierto, anillos lejanos del océano) se puede nadar.
     bool Permitido(Vector3 p)
     {
+        if (usarLimite)
+        {
+            float dx = p.x - centroLimite.x, dz = p.z - centroLimite.z;
+            if (dx * dx + dz * dz > radioLimite * radioLimite) return false;
+        }
         if (agua == null || agua.sharedMesh == null) return true;
         if (mapaAgua == null) ConstruirMapa();
         float r;
-        return mapaAgua.TryGetValue(Clave(p), out r) && r >= limiteOrilla;
+        return !mapaAgua.TryGetValue(Clave(p), out r) || r >= limiteOrilla;
     }
 
     static long Clave(Vector3 p) => ((long)Mathf.FloorToInt(p.x / Celda) << 32) ^ (uint)Mathf.FloorToInt(p.z / Celda);
